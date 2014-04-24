@@ -69,7 +69,7 @@ public class TwitchPlays extends JFrame
 	public TwitchPlays()
 	{
 		self = this;
-        setTitle("TwitchPlays Client by Pheelbert");
+    	setTitle("TwitchPlays Client by Pheelbert");
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         getContentPane().setBackground(Color.BLACK);
@@ -105,7 +105,7 @@ public class TwitchPlays extends JFrame
 	
 	private JPanel createChatPanel(int x, int y, int width, int height)
 	{
-		JPanel panel = new JPanel();
+	    JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createLineBorder(Color.WHITE));
         panel.setBounds(x, y, width, height);
         panel.setBackground(Color.BLACK);
@@ -125,7 +125,7 @@ public class TwitchPlays extends JFrame
 	
 	private JPanel createCredentialsPanel(int x, int y, int width, int height)
 	{
-		JPanel panel = new JPanel();
+	    JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createLineBorder(Color.WHITE));
         panel.setBounds(x, y, width, height);
         panel.setBackground(Color.BLACK);
@@ -176,7 +176,7 @@ public class TwitchPlays extends JFrame
 	
 	private JPanel createExecutePanel(int x, int y, int width, int height)
 	{
-		JPanel panel = new JPanel();
+        JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createLineBorder(Color.WHITE));
         panel.setBounds(x, y, width, height);
         panel.setBackground(Color.BLACK);
@@ -186,7 +186,7 @@ public class TwitchPlays extends JFrame
         panel.add(lblEmulatorWindowName);
         panel.add(emulatorWindowName);
         panel.add(startButton);
-        
+    
         startButton.addActionListener(new ActionListener() 
         {
             @Override
@@ -201,17 +201,17 @@ public class TwitchPlays extends JFrame
                 {
             		try
             		{
-	            		MyIRCBot bot = new MyIRCBot(botUsername.getText(), host.getText(), Integer.parseInt(port.getText()), botPassword.getText(), channel.getText());
-	            		bot.setOutput(self);
-	            		if (!bot.connected) throw new Exception("Could not connect to the channel.");
-	            		botUsername.setEnabled(false);
-	            		botPassword.setEnabled(false);
-	            		channel.setEnabled(false);
-	            		host.setEnabled(false);
-	            		port.setEnabled(false);
-	            		emulatorWindowName.setEnabled(false);
-	            		startButton.setText("Running");
-	            		startButton.setEnabled(false);
+                		MyIRCBot bot = new MyIRCBot(botUsername.getText(), host.getText(), Integer.parseInt(port.getText()), botPassword.getText(), channel.getText());
+                		bot.setOutput(self);
+                		if (!bot.connected) throw new Exception("Could not connect to the channel.");
+                		botUsername.setEnabled(false);
+                		botPassword.setEnabled(false);
+                		channel.setEnabled(false);
+                		host.setEnabled(false);
+                		port.setEnabled(false);
+                		emulatorWindowName.setEnabled(false);
+                		startButton.setText("Running");
+                		startButton.setEnabled(false);
             		}
             		catch (Exception e)
             		{
@@ -282,7 +282,7 @@ public class TwitchPlays extends JFrame
             }
         });
         panel.add(saveButton);
-        
+	        
         return panel;
 	}
 	
@@ -337,7 +337,7 @@ public class TwitchPlays extends JFrame
         scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         scroll.setPreferredSize(new Dimension(220, 200));
         panel.add(scroll);
-        
+    
         addButton.addActionListener(new ActionListener() 
         {
             @Override
@@ -363,7 +363,7 @@ public class TwitchPlays extends JFrame
             	}
             }
         });
-        
+    
         removeButton.addActionListener(new ActionListener() 
         {
             @Override
@@ -467,7 +467,7 @@ public class TwitchPlays extends JFrame
 	}
 
 	public static void main(String[] args) throws Exception 
-    {
+	{
 		new TwitchPlays();
-    }
+	}
 }
