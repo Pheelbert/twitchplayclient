@@ -1,0 +1,10 @@
+!start=L
+!l=Q
+!left=A
+!up=W
+!select=RSHIFT
+!a=X
+!r=E
+!down=S
+!right=D
+!b=Z
