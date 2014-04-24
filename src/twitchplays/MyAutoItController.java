@@ -149,12 +149,3 @@ public class MyAutoItController
 		Keyboard.send(keyCode + RELEASE);
 	}
 }
-
-/*
-String JNES_TITLE = "Jnes 1.1";	
-@SuppressWarnings("unused")
-HWND hWnd = Win.getHandle_(JNES_TITLE);
-Win.activate(JNES_TITLE);
-Win.waitActive(JNES_TITLE, 3);
-Keyboard.send("{ENTER}");
-*/
