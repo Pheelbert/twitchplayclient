@@ -471,3 +471,4 @@ public class TwitchPlays extends JFrame
 		new TwitchPlays();
 	}
 }
+//
