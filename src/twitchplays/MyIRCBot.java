@@ -6,11 +6,6 @@ import org.jibble.pircbot.*;
 public class MyIRCBot extends PircBot 
 {
     private TwitchPlays output = null;
-    /*
-	MyIRCBot bot = new MyIRCBot("ToMyTerribleChannel", "irc.twitch.tv", 6667, "oauth:o2jwv6tvi51fh696n5hb5nzzhmo2efg", "#philbertsroom");
-	bot.setOutput(this);
-	*/
-    
     public boolean connected = false;
 	
     public MyIRCBot(String username, String host, int port, String password, String channel) throws Exception
@@ -60,11 +55,3 @@ public class MyIRCBot extends PircBot
     	}
 	}
 }
-
-/*
-if (message.equalsIgnoreCase("time")) 
-{
-	String time = new java.util.Date().toString();
-	sendMessage(channel, sender + ": The time is now " + time);
-}
-*/
